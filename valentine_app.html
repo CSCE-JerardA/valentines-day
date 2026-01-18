@@ -15,7 +15,80 @@
                 --primary_color: #f6adad;
                 --secondary_color: #b60808;
                 --emote_boxes: #7b0c0c;
+                --text_color: #b60808;
 
+
+            }
+
+            .container {
+
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            body {
+
+                font-family: 'Nunito', sans-serif;
+                color: var(--text_color);
+
+                background-color: var(--primary_color);
+
+                margin: 0;
+                padding: 2rem 1rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            h1, h2, h3, h4 {
+
+                color: var(--emote_boxes);
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .header {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 1.5rem;
+                border-bottom: 2px --secondary_color;
+                margin-bottom: 2rem;
+
+            }
+
+            .header h1 {
+
+                text-align: center;
+                margin: 0;
+            }
+
+            .nav a{
+
+                margin-left: 1rem;
+                text-decoration: none;
+                color: var(--emote_boxes);
+            }
+
+            .nav a:hover {
+
+                color: var(--emote_boxes);
+                text-decoration: underline;
+            }
+
+            .cta_button {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 12px 24px;
+                background-color: var(--primary_color);
+                color: var(--secondary_color);
+                border-radius: 9999px;
+                text-decoration: none;
+                font-weight: bold;
 
             }
 
