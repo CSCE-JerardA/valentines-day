@@ -89,6 +89,8 @@
                 border-radius: 9999px;
                 text-decoration: none;
                 font-weight: bold;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s;
 
             }
 
@@ -112,10 +114,52 @@
 
             .emote-card:hover {
 
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(137, 7, 7, 0.1);
+
                 
             }
+
+
+            .dark-mode {
+
+                --primary_color: #f6adad;
+                --secondary_color: #b60808;
+                --emote_boxes: #7b0c0c;
+                --text_color: #b60808;
+            }
+
+            ::-webkit-scrollbar {
+
+                width: 8px;
+
+            }
+
+            ::-webkit-scrollbar-thumb {
+
+                background-color: var(--emote_boxes);
+                border-radius: 4px;
+            }
+
+            .text-primary-color {
+
+                color: var(--text_color);
+                text-align: center;
+            }
+
+
 
         </style>
     </head>
 
+    <!--Main container for window-->>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            
+        </header>
+    </div>
+</body>
 </html>
