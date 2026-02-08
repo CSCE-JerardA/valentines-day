@@ -46,3 +46,36 @@ function accepted() {
         colors: ['#ff4d6d', '#ffffff', '#ff8fa3'] 
     });
 }
+
+// Function to trigger the Piggy 
+function triggerAngryGoblin() {
+    const noBtn = document.getElementById('noButton');
+    // Only run if she hasn't clicked "Yes" yet
+    if (noBtn && noBtn.style.display !== 'none') {
+        const goblin = document.createElement('img');
+        goblin.src = 'clash-royale-emote-goblin-emote.gif';
+        goblin.style.position = 'fixed';
+        goblin.style.bottom = '10%';
+        goblin.style.left = '-200px'; // Start off-screen
+        goblin.style.width = '150px';
+        goblin.style.zIndex = '100';
+        goblin.style.transition = 'left 4s linear';
+        
+        document.body.appendChild(goblin);
+
+        // Animate across the screen
+        setTimeout(() => {
+            goblin.style.left = '110vw';
+        }, 100);
+
+        // Remove the GIF after it finishes
+        setTimeout(() => {
+            goblin.remove();
+        }, 5000);
+    }
+}
+
+// Triggers the first Goblin at 20 seconds, then every 3 seconds after
+setTimeout(() => {
+    setInterval(triggerGoblin, 3000);
+}, 20000);
