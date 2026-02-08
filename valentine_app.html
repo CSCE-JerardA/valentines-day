@@ -75,7 +75,7 @@
 
             }
 
-            #hogriderPopup {
+            #sanjiPopup {
 
                 display: none;
                 position: fixed;
@@ -92,7 +92,7 @@
                 text-align: center;
             }
 
-            #hogriderPopup img {
+            #sanjiPopup img {
 
                 width: 300px;
                 border-radius: 100px;
@@ -193,11 +193,24 @@
     <!--Main container for window-->>
 <body>
 
-    <div id="hogriderPopup">
+    <div id="sanjiPopup">
+        <h2 style="color: #e67e22;">
+            HURRY UPP!!😡
+        </h2>
+        <img src="assets/sanji_crying.gif">
+        <p>Please choose yes😔</p>
+        <button onclick="document.getElementById('sanjiPopup').style.display='none'" style="cursor: pointer;"> Okay!</button>
+    </div>
 
-        <header class="header">
-            
-        </header>
+    <div class="container">
+        <img id="displayGif" class="main-gif" src="hog_thinking.gif">
+        <h1 id="question"> Will you be my Valentine? 🩷</h1>
+        <div class="button-group">
+            <button class="button" id="yesButton" onclick="accepted()">YAAAAAYY!!!</button>
+            <button class="button" id="noButton" onmouseover="moveButton()">Nah👎🏿</button>
+
+        </div>
+
     </div>
 </body>
 </html>
