@@ -3,7 +3,7 @@ let noCount = 0; // Keeps track of how many times she hovers over "No"
 // Function for if she hovers over NO
 function moveButton() {
     noCount++;
-    const btn = document.getElementById('noBtn');
+    const btn = document.getElementById('noButton');
     const displayGif = document.getElementById('displayGif');
 
     // If she tries to click no, drop an angry emote
@@ -21,8 +21,8 @@ function moveButton() {
 
 // Sets a timer for the Sanji Window (10 seconds)
 setTimeout(() => {
-    const popup = document.getElementById('clashPopup');
-    const noBtn = document.getElementById('noBtn');
+    const popup = document.getElementById('sanjiPopup');
+    const noBtn = document.getElementById('noButton');
     if(noBtn && noBtn.style.display !== 'none') {
         popup.style.display = 'block';
     }
@@ -32,10 +32,9 @@ setTimeout(() => {
 function accepted() {
     document.getElementById('question').innerHTML = "You really do love me! I love you ❤️";
     document.getElementById('displayGif').src = "assets/sanji_in_love.gif";
-    document.getElementById('displayGif').src = "piggys.gif";
-    document.getElementById('displayGif').src = "goblin-giant-clash.gif";
-    document.getElementById('noBtn').style.display = 'none';
-    document.getElementById('clashPopup').style.display = 'none';
+   
+    document.getElementById('noButton').style.display = 'none';
+    document.getElementById('sanjiPopup').style.display = 'none';
     
     // Heart Confetti
     // Had to look up how to do this
