@@ -7,6 +7,7 @@
 
 
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap", rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
         <style>
 
@@ -126,59 +127,6 @@
                 margin: 0;
             }
 
-            .nav a{
-
-                margin-left: 1rem;
-                text-decoration: none;
-                color: var(--emote_boxes);
-            }
-
-            .nav a:hover {
-
-                color: var(--emote_boxes);
-                text-decoration: underline;
-            }
-
-            .cta-button {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                padding: 12px 24px;
-                background-color: var(--primary_color);
-                color: var(--secondary_color);
-                border-radius: 9999px;
-                text-decoration: none;
-                font-weight: bold;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                transition: background-color 0.3s;
-
-            }
-
-            .emote-grid {
-
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 20px;
-                padding-top: 1rem;
-            }
-
-            .emote-card {
-
-                background-color: #f4f4f4;
-                padding: 25px;
-                border-radius: 10px;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s;
-                border: 1px solid #f4f4f4;
-            }
-
-            .emote-card:hover {
-
-                transform: translateY(-5px);
-                box-shadow: 0 5px 15px rgba(137, 7, 7, 0.1);
-
-                
-            }
 
 
             .dark-mode {
@@ -201,10 +149,40 @@
                 border-radius: 4px;
             }
 
-            .text-primary-color {
+            .button {
 
-                color: var(--text_color);
-                text-align: center;
+                padding: 15px 35px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-radius: 50px;
+                border: var(--emote_boxes);
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            #yesButton {
+
+                background-color: #ff4d6d;
+                color: white;
+                transition: 0.2s;
+            }
+
+            #noButton {
+
+                background-color: #f4f4f4;
+                color: #666;
+                position: absolute;
+            }
+
+            .close-clash {
+
+                margin-top: 10px;
+                background:#e67e22 ;
+                color: white;
+                padding: 5px, 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                border: none;
             }
 
 
@@ -215,7 +193,7 @@
     <!--Main container for window-->>
 <body>
 
-    <div class="container">
+    <div id="hogriderPopup">
 
         <header class="header">
             
