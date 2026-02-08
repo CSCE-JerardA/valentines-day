@@ -6,17 +6,20 @@ function moveButton() {
     const btn = document.getElementById('noButton');
     const displayGif = document.getElementById('displayGif');
 
+    btn.style.position = 'absolute';
+
     // If she tries to click no, drop an angry emote
     if (noCount >= 5) {
         displayGif.src = "angry king.jpg";
         document.getElementById('question').innerHTML = "GRRRRRR! 👑";
     }
 
-    const x = Math.random() * (window.innerWidth - btn.offsetWidth);
-    const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+    const padding = 100;
+    const x = Math.random() * (window.innerWidth - btn.offsetWidth - padding);
+    const y = Math.random() * (window.innerHeight - btn.offsetHeight - padding);
     
-    btn.style.left = x + 'px';
-    btn.style.top = y + 'px';
+    btn.style.left = Math.max(padding, x) + 'px';
+    btn.style.top = Math.max(padding, y) + 'px';
 }
 
 // Sets a timer for the Sanji Window (10 seconds)
