@@ -10,7 +10,7 @@ function moveButton() {
 
     // If she tries to click no, drop an angry emote
     if (noCount >= 5) {
-        displayGif.src = "angry king.jpg";
+        displayGif.src = "assets/angry king.jpg";
         document.getElementById('question').innerHTML = "GRRRRRR! 👑";
     }
 
@@ -55,7 +55,7 @@ function triggerAngryGoblin() {
     // Only run if she hasn't clicked "Yes" yet
     if (noBtn && noBtn.style.display !== 'none') {
         const goblin = document.createElement('img');
-        goblin.src = 'clash-royale-emote-goblin-emote.gif';
+        goblin.src = 'assets/clash-royale-emote-goblin-emote.gif';
         goblin.style.position = 'fixed';
         goblin.style.bottom = '10%';
         goblin.style.left = '-200px'; // Start off-screen
